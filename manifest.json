@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "name": "WPI BannerWeb to ICS",
+    "name": "WPI BannerWeb to CSV",
     "version": "0.1",
     "content_scripts": [
         {
