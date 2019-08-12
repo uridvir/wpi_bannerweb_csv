@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+    "name": "WPI BannerWeb to ICS",
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "matches": ["https://bannerweb.wpi.edu/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "page_action": {
+        "default_popup": "popup.html"
+    }
+}
