@@ -117,12 +117,12 @@ if (document.getElementsByClassName('plaintable')[3].children[0].children[0].chi
         //Download file
         var blob = new Blob([fileContents], {type: 'text/csv'});
         if(window.navigator.msSaveOrOpenBlob) {
-            window.navigator.msSaveBlob(blob, 'WPI Schedule.csv');
+            window.navigator.msSaveBlob(blob, 'Schedule.csv');
         }
         else{
             var elem = window.document.createElement('a');
             elem.href = window.URL.createObjectURL(blob);
-            elem.download = 'WPI Schedule.csv';
+            elem.download = 'Schedule.csv';
             document.body.appendChild(elem);
             elem.click();
             document.body.removeChild(elem);
