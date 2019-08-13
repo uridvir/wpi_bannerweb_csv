@@ -4,11 +4,8 @@
     "version": "0.1",
     "content_scripts": [
         {
-            "matches": ["https://bannerweb.wpi.edu/*"],
+            "matches": ["https://bannerweb.wpi.edu/pls/prod/bwskcrse.P_CrseSchdDetl"],
             "js": ["content.js"]
         }
-    ],
-    "page_action": {
-        "default_popup": "popup.html"
-    }
+    ]
 }
