@@ -63,8 +63,6 @@ class Course {
                 var j
                 for (j = 0; j < this.collectedArray[i].days.length; j++){
                     if (this.collectedArray[i].days[j] == currentDate.getDay()){
-                        console.log('day = ' + this.collectedArray[i].days[j])
-                        console.log('currentDate = ' + currentDate)
                         let month = currentDate.getMonth() + 1
                         let date = currentDate.getDate()
                         let year = currentDate.getUTCFullYear()
@@ -87,9 +85,12 @@ class Course {
 }
 
 //If the Concise Student Schedule page is past the term selection screen
-if (document.getElementsByClassName('plaintable')[3].children[0].children[0].children[0].innerText ==
- 'Concise Student Schedule'){
-
+var text
+try {
+    text = document.getElementsByClassName('plaintable')[3].children[0].children[0].children[0].innerText
+}
+catch (e){}
+if (text == 'Concise Student Schedule'){
     var table = document.getElementsByClassName('datadisplaytable')[1].children[0]
     window.exportAction = function() {
         var fileContents = '"Subject","Start Date","Start Time","End Date","End Time","Description","Location"\n'
