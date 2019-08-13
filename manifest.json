@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "WPI BannerWeb to CSV",
-    "version": "0.1",
+    "version": "1.0",
     "content_scripts": [
         {
             "matches": ["https://bannerweb.wpi.edu/pls/prod/bwskcrse.P_CrseSchdDetl"],
