@@ -15,8 +15,7 @@ if (text == 'Concise Student Schedule'){
             Since courses can have multiple meeting times, the data array may need to be multiple lines long.
              */
             var data = []
-            var row
-            for (row = 1; row < table.children.length - 1; row++){
+            for (var row = 1; row < table.children.length - 1; row++){
                 if (table.children[row].children[0].innerText.trim().length != 0){
                     if (data.length != 0){
                         fileContents += new Course(data).formatAsEntries()
@@ -24,8 +23,7 @@ if (text == 'Concise Student Schedule'){
                     data = []
                 }
                 var line = []
-                var column
-                for (column = 0; column < 12; column++){
+                for (var column = 0; column < 12; column++){
                     line.push(table.children[row].children[column].innerText)
                 }
                 data.push(line)
