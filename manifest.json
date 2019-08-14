@@ -8,7 +8,14 @@
             "js": ["content.js"]
         }
     ],
-    "permissions": ["https://bannerweb.wpi.edu/pls/prod/*"],
+    "background": {
+        "scripts": ["lib/imports.js"],
+        "persistent": false
+    },
+    "web_accessible_resources": ["lib/*"],
+    "permissions": [
+        "https://bannerweb.wpi.edu/pls/prod/*"
+    ],
     "icons": {
         "128": "128.png"
     }
