@@ -7,5 +7,8 @@
             "matches": ["https://*.edu/*"],
             "js": ["content.js"]
         }
-    ]
+    ],
+    "icons": {
+        "128": "128.png"
+    }
 }
