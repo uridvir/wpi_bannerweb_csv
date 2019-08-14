@@ -4,10 +4,11 @@
     "version": "1.0",
     "content_scripts": [
         {
-            "matches": ["https://*.edu/*"],
+            "matches": ["https://bannerweb.wpi.edu/pls/prod/*"],
             "js": ["content.js"]
         }
     ],
+    "permissions": ["https://bannerweb.wpi.edu/pls/prod/*"],
     "icons": {
         "128": "128.png"
     }
