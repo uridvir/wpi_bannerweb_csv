@@ -9,7 +9,7 @@
         }
     ],
     "background": {
-        "scripts": ["lib/imports.js"],
+        "scripts": ["imports.js"],
         "persistent": false
     },
     "web_accessible_resources": ["lib/*"],
