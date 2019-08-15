@@ -9,12 +9,13 @@
         }
     ],
     "background": {
-        "scripts": ["imports.js"],
+        "scripts": ["imports.js", "get_calendar_page.js"],
         "persistent": false
     },
     "web_accessible_resources": ["lib/*"],
     "permissions": [
-        "https://bannerweb.wpi.edu/pls/prod/*"
+        "https://bannerweb.wpi.edu/pls/prod/*",
+        "https://www.wpi.edu/offices/registrar/calendar"
     ],
     "icons": {
         "128": "128.png"
