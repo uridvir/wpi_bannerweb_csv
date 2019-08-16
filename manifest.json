@@ -11,7 +11,8 @@
     "background": {
         "scripts": [
             "imports.js",
-            "calendar_page.js"
+            "calendar_page.js",
+            "download.js"
         ],
         "persistent": false
     },
@@ -20,6 +21,7 @@
         "schedule_changes.js"
     ],
     "permissions": [
+        "downloads",
         "https://bannerweb.wpi.edu/pls/prod/*",
         "https://www.wpi.edu/offices/registrar/calendar"
     ],

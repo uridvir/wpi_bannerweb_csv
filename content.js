@@ -30,20 +30,10 @@ if (text == 'Concise Student Schedule'){
                 data.push(line)
             }
             fileContents += new Course(data).formatAsEntries()
-            //TODO change this to use the API
-            //Download file
-            var blob = new Blob([fileContents], {type: 'text/csv'});
-            if(window.navigator.msSaveOrOpenBlob) {
-                window.navigator.msSaveBlob(blob, 'Schedule.csv');
-            }
-            else{
-                var elem = window.document.createElement('a');
-                elem.href = window.URL.createObjectURL(blob);
-                elem.download = 'Schedule.csv';
-                document.body.appendChild(elem);
-                elem.click();
-                document.body.removeChild(elem);
-            }
+            //Use the background script powers of download.js to access the downloads API
+            chrome.runtime.sendMessage({greeting: 'download', data: fileContents}, function(response){
+                console.log('Received response from download.js!')
+            })
         }
         var button = document.createElement("input")
         button.id = "export_button"
