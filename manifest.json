@@ -9,10 +9,16 @@
         }
     ],
     "background": {
-        "scripts": ["imports.js", "get_calendar_page.js"],
+        "scripts": [
+            "imports.js",
+            "calendar_page.js"
+        ],
         "persistent": false
     },
-    "web_accessible_resources": ["lib/*"],
+    "web_accessible_resources": [
+        "course.js",
+        "schedule_changes.js"
+    ],
     "permissions": [
         "https://bannerweb.wpi.edu/pls/prod/*",
         "https://www.wpi.edu/offices/registrar/calendar"

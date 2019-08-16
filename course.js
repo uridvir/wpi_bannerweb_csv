@@ -5,6 +5,7 @@ class Course {
             console.log('data[0].length = ' + data[0].length)
             throw 'Course constructed with invalid data!'
         }
+        console.log(changes)
         this.courseString = data[0][1]
         this.title = data[0][2]
         this.startDate = data[0][6]

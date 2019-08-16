@@ -16,6 +16,7 @@ if (text == 'Concise Student Schedule'){
              */
             var data = []
             for (var row = 1; row < table.children.length - 1; row++){
+                //If a row starts blank, treat it as another line of data for the course being constructed
                 if (table.children[row].children[0].innerText.trim().length != 0){
                     if (data.length != 0){
                         fileContents += new Course(data).formatAsEntries()
@@ -29,6 +30,7 @@ if (text == 'Concise Student Schedule'){
                 data.push(line)
             }
             fileContents += new Course(data).formatAsEntries()
+            //TODO change this to use the API
             //Download file
             var blob = new Blob([fileContents], {type: 'text/csv'});
             if(window.navigator.msSaveOrOpenBlob) {
