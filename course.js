@@ -34,12 +34,18 @@ class Course {
             return result
         }
         for (var i = 0; i < data.length; i++){
+            //This addresses issue #6 (see the GitHub)
+            if (data[i][9] == 'TBA'){
+                this.collectedArray.push({valid: false})
+                continue
+            }
             let times = data[i][9].split('-')
             let collected = {
                 days: daysReformat(data[i][8]),
                 startTime: times[0].trim(),
                 endTime: times[1].trim(),
-                location: data[i][10]
+                location: data[i][10],
+                valid: true
             }
             this.collectedArray.push(collected)
         }
@@ -73,6 +79,9 @@ class Course {
             }
             if (!isDayOff){
                 for (var i = 0; i < this.collectedArray.length; i++){
+                    if (!this.collectedArray[i].valid){
+                        continue
+                    }
                     for (var j = 0; j < this.collectedArray[i].days.length; j++){
                         if (this.collectedArray[i].days[j] == correctDay){
                             let month = currentDate.getMonth() + 1
