@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "WPI BannerWeb to CSV",
-    "version": "1.1",
+    "version": "1.1.1",
     "description": "A browser extension that allows users to download their BannerWeb schedule as a CSV file.",
     "content_scripts": [
         {
