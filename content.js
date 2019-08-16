@@ -31,9 +31,7 @@ if (text == 'Concise Student Schedule'){
             }
             fileContents += new Course(data).formatAsEntries()
             //Use the background script powers of download.js to access the downloads API
-            chrome.runtime.sendMessage({greeting: 'download', data: fileContents}, function(response){
-                console.log('Received response from download.js!')
-            })
+            chrome.runtime.sendMessage({greeting: 'download', data: fileContents})
         }
         var button = document.createElement("input")
         button.id = "export_button"
