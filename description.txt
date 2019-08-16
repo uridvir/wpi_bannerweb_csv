@@ -6,3 +6,4 @@ Changelog:
 1.0: First release!
 1.1: Day-off and special schedule day detection added (also now available on Firefox)
 1.1.1: Removed annoying console.log calls
+1.1.2: Fixed courses with TBA times crashing
