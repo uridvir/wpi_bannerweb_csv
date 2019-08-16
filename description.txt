@@ -1,5 +1,3 @@
-A Chrome extension that allows users to download their BannerWeb schedule as a CSV file.
-
 This extension will download courses from one semester (two WPI terms) to a CSV file. This file can be imported into Google Calendar. To use: log in to BannerWeb and click Student Services & Financial Aid -> Registration -> Concise Student Schedule. Next select a semester and click the "Export to CSV" button. The downloaded file can be imported into Google Calendar.
 
 Code may be found at https://github.com/uridvir/wpi_bannerweb_csv
