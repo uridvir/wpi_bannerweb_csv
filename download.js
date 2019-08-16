@@ -6,7 +6,7 @@ chrome.runtime.onMessage.addListener(
             chrome.downloads.download({url: url, filename: 'Schedule.csv', saveAs: true}, function(id){
                 sendResponse({})
             })
-            return true
+            return true //allows listener to send response asynchronously without timing out
         }
     }
 )
