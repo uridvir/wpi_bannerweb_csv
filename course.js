@@ -87,13 +87,13 @@ class Course {
                             let month = currentDate.getMonth() + 1
                             let date = currentDate.getDate()
                             let year = currentDate.getUTCFullYear()
-                            entries += this.courseString + ','
+                            entries += '\"' + this.courseString + '\"' + ','
                             entries += month + '/' + date + '/' + year + ','
                             entries += this.collectedArray[i].startTime + ','
                             entries += month + '/' + date + '/' + year + ','
                             entries += this.collectedArray[i].endTime + ','
-                            entries += this.title + ','
-                            entries += this.collectedArray[i].location + '\n'
+                            entries += '\"' + this.title + '\"' + ','
+                            entries += '\"' + this.collectedArray[i].location + '\"' + '\n'
                         }
                     }
                 }
