@@ -15,8 +15,8 @@ chrome.runtime.sendMessage({greeting: 'get_calendar_page'}, function(response){
                 //Text says "Fall <current year>"
                 let year = list.children[i].innerText.split(' ')[1]
                 date = new Date('August 1, ' + year)
-                i += 2
-                state = 'other'
+                i += 3 //Need to skip first month text
+                state = 'table'
                 break
             case 'month_text':
                 date.setMonth(date.getMonth() + 1)
@@ -58,9 +58,11 @@ chrome.runtime.sendMessage({greeting: 'get_calendar_page'}, function(response){
                             differentDays.push({date: new Date(date.getTime()), dayToUse: dayToUse})
                         }
                     }
+                    //Checking for 'follow *** schedule' has whitespace issues
                     var followSchedule = function(dayStr){
-                        return info.includes('follow ' + dayStr + ' schedule')
-                            || info.includes('Follow ' + dayStr + ' schedule')
+                        return (info.includes('follow') || info.includes('Follow'))
+                            && info.includes(dayStr)
+                            && info.includes('schedule')
                     }
                     if (followSchedule('Monday')){
                         addDifferentDay(1)
