@@ -10,3 +10,4 @@ Changelog:
 1.1.1: Removed annoying console.log calls
 1.1.2: Fixed courses with TBA times crashing
 1.1.3: Fixed commas in course title corrupting data
+1.1.4: Fixed issue caused by updated calendar page
