@@ -16,7 +16,7 @@ chrome.runtime.sendMessage({greeting: 'get_calendar_page'}, function(response){
                 let year = list.children[i].innerText.split(' ')[1]
                 date = new Date('August 1, ' + year)
                 i += 2
-                state = 'table'
+                state = 'other'
                 break
             case 'month_text':
                 date.setMonth(date.getMonth() + 1)
