@@ -2,6 +2,9 @@
 
 A Chrome extension which allows users to download their BannerWeb schedule as a CSV file.
 
+**No longer working, since WPI disabled BannerWeb in 2021.** Chrome store listing here:
+https://chrome.google.com/webstore/detail/wpi-bannerweb-to-csv/gdlimelaphcnodijljjcdgcmbcebicnl
+
 # General
 
 This extension will download courses from one semester (two WPI terms) to a CSV file. This file can be imported into
